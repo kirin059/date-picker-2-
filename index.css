@@ -30,4 +30,74 @@ h1 span {
     margin: 30px auto;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    user-select: none; /* 사용자가 해당 요소의 텍스트를 선택하지 못하도록 막는다 */
+}
+
+.datePicker:hover {
+    background-color: #f3f3f3;
+}
+
+.datePicker .selectedDate {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #313131;
+    font-size: 28px;
+}
+
+.datePicker .dates {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+
+.datePicker .dates.active {
+    display: block;
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+}
+
+.arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    color: #313131;
+    font-size: 20px;
+}
+
+.arrows:hover {
+    background-color: #f3f3f3;
+}
+
+.arrows:active {
+    background-color: #00ca85;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 200px;
+}
+
+.days .day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #313131;
+}
+
+.day.selected {
+    background-color: #00ca85;
 }
