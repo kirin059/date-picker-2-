@@ -65,6 +65,12 @@ function populateDates(e) {
         days.appendChild(dayElement);
     }
 }
+
+
+// css 지정
+.selected {
+    background-color: #00ca85;
+}
 ```
 
 
